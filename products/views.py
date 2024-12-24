@@ -21,7 +21,7 @@ def products(request):
         if name:
             pro = pro.filter(category__name__icontains=name)
             
-    paginator = Paginator(pro,2)
+    paginator = Paginator(pro,6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
