@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'infradb',
         'USER': 'postgres',
         'PASSWORD': 'mohamedalibego11#',
-        'HOST': 'localhost',
+        'HOST': 'infratech-eg.com',
         'PORT': '5433',
     }
 }
