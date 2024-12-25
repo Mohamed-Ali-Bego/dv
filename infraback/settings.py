@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ky7u46y(sudq^u)aqtg*b_mk9s7g+27ftp)7fsh8yh&g9ue)jy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = []
+
 
 
 # Application definition
@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'infradb',
         'USER': 'postgres',
         'PASSWORD': 'mohamedalibego11#',
-        'HOST': 'infratech-eg.com',
+        'HOST': 'localhost',
         'PORT': '5433',
     }
 }
@@ -128,8 +128,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'static'
-STATIC_URL = 'static/'
+# STATIC_ROOT = BASE_DIR / 'static'
+# STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     BASE_DIR / 'infraback/static'
 ]
@@ -139,8 +141,14 @@ STATICFILES_STORAG = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 #Media Folder
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = 'media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = 'media/'
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
