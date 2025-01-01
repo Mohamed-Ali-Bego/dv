@@ -89,7 +89,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'mohamedalibego11#',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5433',
     }
 }
 
@@ -137,8 +137,8 @@ STATICFILES_DIRS = [
 ]
 
 # Whitenoise static stuff
-STATICFILES_STORAG = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAG = 'whitenoise.storage.CompressedManifestStaticStorage'
+STATIC_ROOT = BASE_DIR / 'static'
 
 #Media Folder
 # MEDIA_ROOT = BASE_DIR / 'media'
