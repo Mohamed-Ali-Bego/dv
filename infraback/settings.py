@@ -131,14 +131,14 @@ USE_TZ = True
 # STATIC_ROOT = BASE_DIR / 'static'
 # STATIC_URL = 'static/'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/var/www/infratech/static/')
 STATICFILES_DIRS = [
     BASE_DIR / 'infraback/static'
 ]
 
 # Whitenoise static stuff
-STATICFILES_STORAG = 'whitenoise.storage.CompressedManifestStaticStorage'
-STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_STORAG = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / '/var/www/infratech/static/'
 
 #Media Folder
 # MEDIA_ROOT = BASE_DIR / 'media'
@@ -147,7 +147,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/infratech/media/')
 
 
 # Default primary key field type
