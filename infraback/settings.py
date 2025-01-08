@@ -130,8 +130,8 @@ USE_TZ = True
 
 # STATIC_ROOT = BASE_DIR / 'static'
 # STATIC_URL = 'static/'
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/var/www/infratech/static/')
+STATIC_URL = '/var/www/infratech/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 STATICFILES_DIRS = [
     BASE_DIR / 'infraback/static'
 ]
@@ -146,8 +146,8 @@ STATIC_ROOT = BASE_DIR / '/static/'
 
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/infratech/media/')
+MEDIA_URL = '/var/www/infratech/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
 
 
 
